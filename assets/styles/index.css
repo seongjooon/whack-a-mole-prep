@@ -1,12 +1,73 @@
-html, body {
+* {
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: rgb(38, 165, 77);
+  margin: 0;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+#title {
+  font-size: 90px;
+  font-family:'Indie Flower', cursive;
+  text-align: center;
 }
 
-h1 {
-  color: #2574D0;
+#punch-count {
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#score-board {
+  width: 100%;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  color: rgb(235, 63, 63);
+}
+
+#ready-window {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#ready-window>div>img {
+  width: 150px;
+  list-style: none;
+}
+
+#btn {
+  text-align: center;
+}
+
+#startBtn {
+  width: 120px;
+  height: 50px;
+  margin: 10px;
+  border: 0;
+  border-radius: 80px;
+  outline: 0;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(131, 77, 60);
+}
+#restartBtn {
+  width: 160px;
+  height: 50px;
+  margin: 10px;
+  border: 0;
+  border-radius: 80px;
+  outline: 0;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(131, 77, 60);
+  /* visibility: hidden; */
+  display: none;
 }
