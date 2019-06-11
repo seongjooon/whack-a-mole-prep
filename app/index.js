@@ -38,7 +38,7 @@ import 'styles/index.css';
     checkCount();
   };
 
-  let riseMole = () => {
+  const riseMole = () => {
     let selectedHole = holeStage[getRandomNumber()][getRandomNumber()];
 
     if (beforeId === selectedHole.id) return riseMole();
