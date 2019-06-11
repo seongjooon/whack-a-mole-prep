@@ -8,6 +8,7 @@
   font-size: 90px;
   font-family:'Indie Flower', cursive;
   text-align: center;
+  color: rgb(63, 10, 10);
 }
 
 #punch-count {
@@ -27,10 +28,11 @@
   font-size: 80px;
   font-weight: bold;
   color: rgb(235, 63, 63);
+  display: none;
 }
 
 #ready-window {
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -56,6 +58,7 @@
   color: black;
   background-color: rgb(131, 77, 60);
 }
+
 #restartBtn {
   width: 160px;
   height: 50px;
@@ -68,6 +71,5 @@
   font-weight: bold;
   color: black;
   background-color: rgb(131, 77, 60);
-  /* visibility: hidden; */
   display: none;
 }
