@@ -1,4 +1,4 @@
-* {
+html, body {
   box-sizing: border-box;
   background-color: rgb(38, 165, 77);
   margin: 0;
@@ -45,7 +45,7 @@
   text-align: center;
 }
 
-#startBtn {
+#start-btn {
   width: 120px;
   height: 50px;
   margin: 10px;
@@ -59,7 +59,7 @@
   background-color: rgb(131, 77, 60);
 }
 
-#restartBtn {
+#restart-btn {
   width: 160px;
   height: 50px;
   margin: 10px;

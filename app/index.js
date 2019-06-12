@@ -26,7 +26,7 @@ import 'styles/index.css';
     document.getElementById("punch-count").innerHTML = `Count : ${remainedCount}`;
 
     const id = e.target.id.split('-')[1] * 1;
-    const flatten = holeStage.reduce((acc, v) => { return [...acc, ...v] }, []);
+    const flatten = holeStage.reduce((acc, v) => ([...acc, ...v]), []);
     const selectedHole = flatten.filter(v => v.id === id)[0];
 
     if (!selectedHole.isUp) return checkCount();
@@ -46,11 +46,11 @@ import 'styles/index.css';
     beforeId = selectedHole.id;
     document.getElementById(`hole-${selectedHole.id}`).src = 'assets/images/mole.jpg';
 
-    setTimeout(() => { hideMole(selectedHole.id) }, 3000);
+    setTimeout(() => hideMole(selectedHole.id), 3000);
   };
 
   const hideMole = id => {
-    const flatten = holeStage.reduce((acc, v) => { return [...acc, ...v] }, []);
+    const flatten = holeStage.reduce((acc, v) => ([...acc, ...v]), []);
     const selectedHole = flatten.filter(v => v.id === id)[0];
 
     if (!selectedHole.isUp) return;
@@ -69,7 +69,7 @@ import 'styles/index.css';
 
     document.getElementById("score-board").style.display = 'inline';
     document.getElementById("score-board").innerHTML = `Your Punch Score : ${(scoreBoard / 10) * 100}`;
-    document.getElementById("restartBtn").style.display = 'inline';
+    document.getElementById("restart-btn").style.display = 'inline';
   };
 
   const gameStart = () => {
@@ -78,17 +78,17 @@ import 'styles/index.css';
     remainedCount = 10;
 
     document.getElementById("score-board").style.display = 'none';
-    document.getElementById("restartBtn").style.display = 'none';
+    document.getElementById("restart-btn").style.display = 'none';
     document.getElementById("punch-count").innerHTML = `Count : ${remainedCount}`;
 
     for (let i = 0; i < 9; i++) {
       document.getElementById(`hole-${i}`).addEventListener('click', punchMole);
     }
 
-    document.getElementById("startBtn").style.display = 'none';
+    document.getElementById("start-btn").style.display = 'none';
     setTimeout(riseMole, 1000);
   };
 
-  document.getElementById('startBtn').addEventListener('click', gameStart);
-  document.getElementById('restartBtn').addEventListener('click', gameStart);
+  document.getElementById('start-btn').addEventListener('click', gameStart);
+  document.getElementById('restart-btn').addEventListener('click', gameStart);
 })();
